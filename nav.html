@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <section class="grid grid-cols-12 bg-gray-200 items-center">
+        <button class="grid pl-5 lg:hidden h-fit gap-2" onclick="openNav(this)">
+          <span class="w-8 bg-white h-[2px]"></span>
+          <span class="w-8 bg-white h-[2px]"></span>
+          <span class="w-8 bg-white h-[2px]"></span>
+        </button>
+
+        <div class="grid grid-cols-5 p-2 col-span-11">
+          <a class="text-lg font-semibold">Test</a>
+          <a class="text-lg font-semibold">Test</a>
+          <a class="text-lg font-semibold">Test</a>
+          <a class="text-lg font-semibold">Test</a>
+          <a class="text-lg font-semibold">Test</a>
+        </div>
+      </section>
+      <!-- menus====================================== -->
+      <nav class="hidden lg:grid grid-cols-5 bg-red-200">
+        <!-- first element -->
+        <div class="relative">
+          <button class="peer text-lg font-semibold cursor-pointer p-3 z-10">
+            Home
+          </button>
+          <div
+            class="hidden peer-hover:flex hover:flex flex-col absolute top-13 left-5 bg-gray-200"
+          >
+            <a class="p-3 hover:bg-red-200">Child 1</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+          </div>
+        </div>
+        <!-- second element -->
+        <div class="relative">
+          <button class="peer text-lg font-semibold cursor-pointer p-3 z-10">
+            About
+          </button>
+          <div
+            class="hidden peer-hover:flex hover:flex flex-col absolute top-13 left-5 bg-gray-200"
+          >
+            <a class="p-3 hover:bg-red-200">Child 2</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+          </div>
+        </div>
+        <!-- third element -->
+        <div class="relative">
+          <button class="peer text-lg font-semibold cursor-pointer p-3 z-10">
+            Members
+          </button>
+          <div
+            class="hidden peer-hover:flex hover:flex flex-col absolute top-13 left-5 bg-gray-200"
+          >
+            <a class="p-3 hover:bg-red-200">Child 3</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+          </div>
+        </div>
+        <!-- fourth element -->
+        <div class="relative">
+          <button class="peer text-lg font-semibold cursor-pointer p-3 z-10">
+            Committee
+          </button>
+          <div
+            class="hidden peer-hover:flex hover:flex flex-col absolute top-13 left-5 bg-gray-200"
+          >
+            <a class="p-3 hover:bg-red-200">Child 4</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+          </div>
+        </div>
+        <!-- fifth element -->
+        <div class="relative">
+          <button class="peer text-lg font-semibold cursor-pointer p-3 z-10">
+            Finance
+          </button>
+          <div
+            class="hidden peer-hover:flex hover:flex flex-col absolute top-13 left-5 bg-gray-200"
+          >
+            <a class="p-3 hover:bg-red-200">Child 5</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+            <a class="p-3 hover:bg-red-200">Nested</a>
+          </div>
+        </div>
+      </nav>
+    </main>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const openNav = (e) => {
+        if (nav.classList.contains("hidden")) {
+          nav.classList.add("grid");
+          nav.classList.remove("hidden");
+        } else {
+          nav.classList.remove("grid");
+          nav.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
+</html>
